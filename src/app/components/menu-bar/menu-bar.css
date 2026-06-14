@@ -1,0 +1,74 @@
+.menu-bar-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: rgba(10, 10, 15, 0.85);
+    backdrop-filter: blur(12px);
+    width: 100%;
+    height: 60px;
+    padding: 0 50px;
+    border-bottom: 2px solid #00ebfe;
+    box-shadow: 0 4px 20px rgba(0, 235, 254, 0.15);
+}
+
+.menu-bar-logo{
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    transition: transform 0.3s ease;
+}
+
+.menu-bar-logo:hover {
+    transform: scale(1.08);
+}
+
+.menu-bar-item{
+    display: flex;
+    margin: 0;
+    align-items:center;
+}
+
+.menu-bar-item ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 35px;
+}
+
+.menu-bar-item ul li a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-family: 'Press Start 2P', monospace;
+    font-weight: 500;
+    font-size: 0.75rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.menu-bar-item ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00ebfe;
+    transition: width 0.3s ease;
+}
+
+.menu-bar-item ul li a:hover {
+    color: #00ebfe;
+    text-shadow: 0 0 8px rgba(0, 235, 254, 0.6);
+}
+
+.menu-bar-item ul li a:hover::after {
+    width: 100%;
+}

@@ -1,0 +1,14 @@
+<a class="card-container" [href]="gameLink" target="_blank">
+    
+    <img class="card-img" [src]="gameCover" width="350px" alt="">
+    @if (gameLabel){
+        <app-card-label [gameLabel]="gameLabel"></app-card-label>
+    }
+    <app-card-pricing 
+    [gamePriceTitle]="gamePriceTitle"
+    [cardType]="gameType"
+    [cardPricing]="gamePricing"
+    >
+    </app-card-pricing>
+
+</a>

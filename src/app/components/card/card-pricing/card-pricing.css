@@ -1,0 +1,49 @@
+.card-pricing-container {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(8, 8, 12, 0.95) 70%, rgba(8, 8, 12, 0) 100%);
+    color: #ffffff;
+    z-index: 1;
+}
+
+.card-pricing-title h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    margin: 0 0 6px 0;
+}
+
+.card-pricing-value {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 8px;
+}
+
+.card-pricing-value-console p {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.card-pricing-value-money {
+    display: flex;
+    align-items: center;
+}
+
+.card-pricing-value-money .game-money {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #10b981;
+    text-shadow: 0 0 8px rgba(16, 185, 129, 0.3);
+    margin: 0;
+}

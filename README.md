@@ -1,59 +1,51 @@
-# Store
+# 🎮 PlayStation Retro Store - Angular 21+
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.7.
+Este é um projeto desenvolvido como parte da formação em **Angular**, com o objetivo de criar uma loja virtual temática de jogos clássicos retrô (estilo PlayStation Store) com interface moderna e design **Retro Dark**. 
 
-## Development server
+O foco principal do projeto é a **aprendizagem prática de componentização modular**, **fluxo de dados unidirecional** e **reatividade** com o Angular moderno.
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## 📹 Demonstração do Projeto em Ação
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Veja abaixo o vídeo gravado demonstrando o funcionamento do site, a estilização Retro Dark e a navegação dinâmica dos cards em ação:
 
-## Code scaffolding
+<video src="public/screen-capture.webm" controls width="100%"></video>
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+## 🎯 Objetivos de Aprendizado e Arquitetura
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### 1. Componentização Avançada
+O projeto divide a interface em componentes especializados e independentes, organizados na seguinte hierarquia:
 
-```bash
-ng generate --help
-```
+* **`MenuBar`** ([menu-bar.ts](src/app/components/menu-bar/menu-bar.ts)): Menu fixo no topo com estilização *glassmorphism* escura e links pixelados 8-bit com efeito neon ciano no hover.
+* **`Home`** ([home.ts](src/app/pages/home/home.ts)): Página principal responsável pelo estado e a lista de jogos cadastrados (armazenados reativamente com `signal`).
+* **`Card`** ([card.ts](src/app/components/card/card.ts)): Componente intermediário que recebe todos os dados de um jogo e distribui para seus subcomponentes. O card funciona como um link direto para a ROM do jogo.
+* **`CardLabel`** ([card-label.ts](src/app/components/card/card-label/card-label.ts)): Tarja promocional com gradiente moderno que destaca a versão ou edição do game.
+* **`CardPricing`** ([card-pricing.ts](src/app/components/card/card-pricing/card-pricing.ts)): Exibe de forma organizada a plataforma do game retrô (ex: `SNES`) e o valor ou link de download da ROM em destaque verde neon.
 
-## Building
+### 2. Fluxo de Dados e Reatividade (Signals)
+* **Property Binding (`[]`):** Passagem dinâmica de dados do componente pai (`Home`) para o filho (`Card`) e netos (`CardLabel`/`CardPricing`) usando `@Input()`.
+* **Angular Signals:** Utilização de `signal()` para armazenar o array de dados dos jogos, garantindo que o Angular reaja apenas a mudanças pontuais no estado de maneira altamente performática.
+* **Modern Control Flow (`@for` e `@if`):** Utilização das estruturas nativas do Angular 17+ para listagem dinâmica de cards (`@for` com otimização `track`) e exibição condicional das tarjas promocionais (`@if`).
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## 🚀 Como Rodar o Projeto Localmente
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+1. **Instalar Dependências:**
+   ```bash
+   npm install
+   ```
 
-## Running unit tests
+2. **Iniciar Servidor de Desenvolvimento:**
+   ```bash
+   npm run start
+   ```
+   Acesse a aplicação em `http://localhost:4200/`.
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+3. **Compilar para Produção (Build):**
+   ```bash
+   npm run build
+   ```

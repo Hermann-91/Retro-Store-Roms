@@ -1,0 +1,18 @@
+<h1> Retro Store Roms!</h1>
+
+<div class="home-container">
+    <div class="home-games-list">
+        @for (game of games(); track game.gameCover)
+        {
+            <app-card
+            [gameCover]="game.gameCover"
+            [gameLabel]="game.gameLabel"
+            [gameType]="game.gameType"
+            [gamePricing]="game.gamePricing"
+            [gamePriceTitle]="game.gamePriceTitle"
+            [gameLink]="game.gameLink"
+            ></app-card>
+        }
+        
+    </div>
+</div>
