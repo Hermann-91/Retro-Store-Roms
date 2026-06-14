@@ -8,9 +8,9 @@ O foco principal do projeto é a **aprendizagem prática de componentização mo
 
 ## 📹 Demonstração do Projeto em Ação
 
-Veja abaixo o vídeo gravado demonstrando o funcionamento do site, a estilização Retro Dark e a navegação dinâmica dos cards em ação:
+Veja abaixo a demonstração em GIF mostrando o funcionamento do site, a estilização Retro Dark e a navegação dinâmica dos cards em ação:
 
-<video src="public/screen-capture.webm" controls width="100%"></video>
+![Demonstração do Projeto](./public/public_screen-capture.gif)
 
 ---
 
