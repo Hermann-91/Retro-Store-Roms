@@ -1,4 +1,4 @@
-# 🎮 PlayStation Retro Store - Angular 21+
+# 🎮 Retro Store - Angular 21+
 
 Este é um projeto desenvolvido como parte da formação em **Angular**, com o objetivo de criar uma loja virtual temática de jogos clássicos retrô (estilo PlayStation Store) com interface moderna e design **Retro Dark**. 
 
